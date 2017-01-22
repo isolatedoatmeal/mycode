@@ -297,6 +297,7 @@
 				F18F55BC1E31A90400ADBEBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
