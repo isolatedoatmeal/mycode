@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var stackView: UIStackView!
+    @IBOutlet var classBox: UIView!
     @IBOutlet var addClassView: UIView!
     
+    @IBOutlet var classLabel: UILabel!
    
+    @IBOutlet var classTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -35,8 +39,19 @@ class ViewController: UIViewController {
             self.addClassView.alpha = 1
             self.addClassView.transform = CGAffineTransform.identity
         }
-        
     }
+        func animateInBox() {
+            stackView.addSubview(classBox)
+            
+            UIView.animate(withDuration: 0.4){
+                
+                
+                self.classBox.alpha = 1
+                self.classBox.transform = CGAffineTransform.identity
+            }
+    }
+    
+    
     
     func animateOut (){
         UIView.animate(withDuration: 0.3, animations: {
@@ -46,12 +61,17 @@ class ViewController: UIViewController {
         }) { (successs:Bool) in
             self.addClassView.removeFromSuperview()
     }
-    }
-
+        }
+        
     @IBAction func dismissPopUp(_ sender: Any) {
+        classLabel.text = classTextField.text
         animateOut()
-    }
+        animateInBox()
+                }
+        
+    
     @IBAction func addClass(_ sender: Any) {
+       
         animateIn()
     }
    

@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -37,6 +37,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1qD-wa-MhI">
+                                <rect key="frame" x="0.0" y="64" width="371" height="599"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="2gK-BB-mEc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="21P-4V-H0F"/>
@@ -48,6 +52,10 @@
                     <navigationItem key="navigationItem" id="Rhh-3a-gAG"/>
                     <connections>
                         <outlet property="addClassView" destination="N9O-nD-8LD" id="oWj-zQ-3nq"/>
+                        <outlet property="classBox" destination="kzR-fK-2zN" id="yGM-7u-Nd0"/>
+                        <outlet property="classLabel" destination="Plv-tZ-lMk" id="FRi-b0-7pH"/>
+                        <outlet property="classTextField" destination="Rtn-gf-qkn" id="ERM-Vd-91C"/>
+                        <outlet property="stackView" destination="1qD-wa-MhI" id="Eyj-Gi-2xq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
