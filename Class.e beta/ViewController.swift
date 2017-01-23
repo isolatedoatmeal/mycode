@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var classBox: UIView!
     @IBOutlet var addClassView: UIView!
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var classTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      scrollView.contentSize.height = 1000
         
         
         addClassView.layer.cornerRadius = 5
